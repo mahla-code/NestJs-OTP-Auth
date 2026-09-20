@@ -16,7 +16,7 @@ import { JwtModule } from '@nestjs/jwt';
     }),
     UserModule,
     AuthModule,
-    JwtModule
+    JwtModule.register({})
   ],
   controllers: [],
   providers: [TypeormDBconfig],
