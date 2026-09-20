@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate{
     }
     protected ExtractToken(request:Request){
         const{authorization}=request.headers;
-        if(! authorization || authorization.trim()==" "){
+        if(! authorization || authorization.trim()===" "){
             throw new UnauthorizedException ("login to your account ")
         }
         const [bearer,token]=authorization.split(" ")
